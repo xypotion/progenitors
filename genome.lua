@@ -16,17 +16,28 @@ function generateCardList(cards)
 	
 	local list = {}--{1,1,1}, "cards:\n"}
 	
+	-- if cards.rx > 0 then table.insert(list, {1,0,0}) table.insert(list, "RX - "..cards.rx.."\n") end
+	-- if cards.gx > 0 then table.insert(list, {0,1,0}) table.insert(list, "GX - "..cards.gx.."\n") end
+	-- if cards.bx > 0 then table.insert(list, {0,0,1}) table.insert(list, "BX - "..cards.bx.."\n") end
+	--  	if cards.rg > 0 then table.insert(list, {1,1,0}) table.insert(list, "RG - "..cards.rg.."\n") end
+	--  	if cards.rb > 0 then table.insert(list, {1,0,1}) table.insert(list, "RB - "..cards.rb.."\n") end
+	--  	if cards.gb > 0 then table.insert(list, {0,1,1}) table.insert(list, "GB - "..cards.gb.."\n") end
+	--  	if cards.rr > 0 then table.insert(list, {1,0,0}) table.insert(list, "*** RR - "..cards.rr.."\n") end
+	--  	if cards.gg > 0 then table.insert(list, {0,1,0}) table.insert(list, "*** GG - "..cards.gg.."\n") end
+	--  	if cards.bb > 0 then table.insert(list, {0,0,1}) table.insert(list, "*** BB - "..cards.bb.."\n") end
+	--  	if cards.xx > 0 then table.insert(list, {1,1,1}) table.insert(list, "XX - "..cards.xx.."\n") end
+
 	if cards.rx > 0 then table.insert(list, {1,0,0}) table.insert(list, "RX - "..cards.rx.."\n") end
 	if cards.gx > 0 then table.insert(list, {0,1,0}) table.insert(list, "GX - "..cards.gx.."\n") end
 	if cards.bx > 0 then table.insert(list, {0,0,1}) table.insert(list, "BX - "..cards.bx.."\n") end
- 	if cards.rg > 0 then table.insert(list, {1,1,0}) table.insert(list, "RG - "..cards.rg.."\n") end
- 	if cards.rb > 0 then table.insert(list, {1,0,1}) table.insert(list, "RB - "..cards.rb.."\n") end
- 	if cards.gb > 0 then table.insert(list, {0,1,1}) table.insert(list, "GB - "..cards.gb.."\n") end
- 	if cards.rr > 0 then table.insert(list, {1,0,0}) table.insert(list, "*** RR - "..cards.rr.."\n") end
- 	if cards.gg > 0 then table.insert(list, {0,1,0}) table.insert(list, "*** GG - "..cards.gg.."\n") end
- 	if cards.bb > 0 then table.insert(list, {0,0,1}) table.insert(list, "*** BB - "..cards.bb.."\n") end
- 	if cards.xx > 0 then table.insert(list, {1,1,1}) table.insert(list, "XX - "..cards.xx.."\n") end
-	
+ 	-- if cards.rg > 0 then table.insert(list, {1,1,0}) table.insert(list, "RG - "..cards.rg.."\n") end
+ 	-- if cards.rb > 0 then table.insert(list, {1,0,1}) table.insert(list, "RB - "..cards.rb.."\n") end
+ 	-- if cards.gb > 0 then table.insert(list, {0,1,1}) table.insert(list, "GB - "..cards.gb.."\n") end
+ 	-- if cards.rr > 0 then table.insert(list, {1,0,0}) table.insert(list, "*** RR - "..cards.rr.."\n") end
+ 	-- if cards.gg > 0 then table.insert(list, {0,1,0}) table.insert(list, "*** GG - "..cards.gg.."\n") end
+ 	-- if cards.bb > 0 then table.insert(list, {0,0,1}) table.insert(list, "*** BB - "..cards.bb.."\n") end
+ 	-- if cards.xx > 0 then table.insert(list, {1,1,1}) table.insert(list, "XX - "..cards.xx.."\n") end
+		
 	return list
 end
 
@@ -247,7 +258,7 @@ function setGeneColor(g)
 	if g == 1 then
 		love.graphics.setColor(1,0,0)
 	elseif g == 2 then
-		love.graphics.setColor(0,1,0)
+		love.graphics.setColor(0,0.9,0)
 	elseif g == 3 then
 		love.graphics.setColor(0,0,1)
 	elseif g == 4 or g == 0 then
